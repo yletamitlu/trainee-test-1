@@ -130,8 +130,20 @@ const replaceChar = (char) => {
  * @return  {string} - полученная строка
  * @param {string} str - входная строка
  */
-const getBewilderedStr = (str) => {
+export const getBewilderedStr = (str) => {
     return str.split('').map(replaceChar).join('');
 };
 
-export default getBewilderedStr;
+/**
+ * @function
+ * Генерирует последовательность из рандомных символов (русскогоо и английского алфавита)
+ * @return  {string} - полученная строка из рандомных символоов
+ */
+export const getRandomStr = () => {
+    const symbols = alphabetRUu.concat(alphabetRUl).concat(alphabetENu).concat(alphabetENl).join('');
+    let result = '';
+    for (let i = 0; i < 8; i++) {
+        result += symbols.charAt(Math.floor(Math.random() * symbols.length));
+    }
+    return result;
+}
