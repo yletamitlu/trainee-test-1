@@ -40,14 +40,9 @@ export default ({item, index, transform}) => {
 			{image_src && (
 				<Block className={transform('picture')}>
 					<Image
-						className={transform('images')}
-						style={{backgroundImage:`url(${image_src})`,
-							backgroundPosition: 'center',
-							backgroundSize: 'cover',
-							backgroundRepeat: 'no-repeat',
-							width: +image_width,
-							height: +image_height,
-						}}
+						image={image_src}
+						width={image_width}
+						height={image_height}
 					/>
 				</Block>
 			)}
