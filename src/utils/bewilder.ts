@@ -5,7 +5,7 @@
  * @param {string} firstChar - первый символ массива
  * @param {string} lastChar - последниц символ массива
  */
-const getCharArray = (firstChar: string, lastChar: string) => {
+const getCharArray = (firstChar, lastChar) => {
     const resultArray = [];
     let i = firstChar.charCodeAt(0);
     const top = lastChar.charCodeAt(0);
@@ -101,7 +101,7 @@ const symbols = {
  * @return {string} resultChar - полученный символ
  * @param {string} char - символ, который нужно заменить
  */
-const replaceChar = (char: string) => {
+const replaceChar = (char) => {
     let resultChar;
     if (alphabetRUu.indexOf(char) >= 0) {
         resultChar = ruUpper[char] ? String.fromCharCode(ruUpper[char]) : char;
@@ -130,7 +130,7 @@ const replaceChar = (char: string) => {
  * @return  {string} - полученная строка
  * @param {string} str - входная строка
  */
-const getBewilderedStr = (str: string): string => {
+const getBewilderedStr = (str) => {
     return str.split('').map(replaceChar).join('');
 };
 

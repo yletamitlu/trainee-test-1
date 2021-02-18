@@ -1,6 +1,6 @@
 import * as React from "react";
-import {wrap} from "smokescreen/Welter.js"
-import getBewilderedStr from "./utils/bewilder"
+import {wrap} from "smokescreen/Welter"
+import getBewilderedStr from "../../utils/bewilder"
 
 // Для защиты от XPath - использование функции wrap для генерации DOM-элементов вокруг SmokeText и
 // использование кастомного тега, который каждый раз меняется при перезагрузке страницы (класс элемента - таким же образом)
